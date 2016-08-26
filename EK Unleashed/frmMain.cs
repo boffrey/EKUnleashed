@@ -4294,6 +4294,11 @@ namespace EKUnleashed
             Game.Play_DailyTasks();
         }
 
+		private void fightMazeTowersButLeaveOneItemInEachTowerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utils.StartMethodMultithreaded(() => { Game.Play_SpendEnergy(1, true); });
+        }
+
         private void moreCardGroupsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!Game.Want_Game_Login)

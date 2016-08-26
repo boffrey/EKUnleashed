@@ -2645,6 +2645,13 @@ namespace EKUnleashed
 
                             this.ParentForm.UpdateDIButton(true, (this.User_Gems >= gem_cost) && (!this.DI_BoughtCooldown), "End Cooldown\r\nCosts: " + gem_cost.ToString("#,##0") + " gems\r\n(you have: " + this.User_Gems.ToString("#,##0") + " gems)");
 
+                            // If always pay # gems for cooldown is checked for this demon
+                            var gemPaymentForCooldown = GetGemPaymentForDemon(DI_boss);
+                            if (gemPaymentForCooldown >= gem_cost && this.User_Gems >= gem_cost)
+                            {
+                                this.ParentForm.btnDIEndCooldown_Click(null, null);
+                            }
+
                             int DI_current_ranking = Utils.CInt(DI_rank["data"]["Rank"].ToString());
 
                             int minutes = internal_cooldown_time / 60;
@@ -2668,6 +2675,17 @@ namespace EKUnleashed
             this.ParentForm.UpdateDIVitals("");
         }
 
+        private decimal GetGemPaymentForDemon(JObject diBoss)
+        {
+            string boss_card_id = diBoss["data"]["Boss"]["BossCardId"].ToString().Replace("\"", "").Trim();
+            string bossName = NameOfDemon(boss_card_id);
+
+            var optionValue = 0;
+            int.TryParse(Utils.GetAppSetting("DemonInvasion_" + bossName + "_GemReset"), out optionValue);
+
+            return optionValue * 10;
+        }
+        
         private object locker_di_entrance = new object();
 
         public void Play_DemonInvasion()
@@ -6520,7 +6538,7 @@ namespace EKUnleashed
             }
         }
 
-        public void Play_SpendEnergy(int override_mode = 0)
+        public void Play_SpendEnergy(int override_mode = 0, bool keepOneMazeItem = false)
         {
             // Don't spend energy if Demon Invasion or Kingdom War is in progress
             if (this.KW_Ongoing || this.DoingDemonInvasion) return;
@@ -6559,7 +6577,7 @@ namespace EKUnleashed
                             {
                                 if (Utils.CInt(tower_to_fight) > 0)
                                 {
-                                    MazeStatus mzStatus = this.Play_DoTowerMaze(ref this.opts, Utils.CInt(tower_to_fight));
+                                    MazeStatus mzStatus = this.Play_DoTowerMaze(ref this.opts, Utils.CInt(tower_to_fight), keepOneMazeItem);
                                     if (mzStatus != MazeStatus.Completed && mzStatus != MazeStatus.Skipped_No_Reset_Available) return;
                                 }
                             }
@@ -6590,7 +6608,7 @@ namespace EKUnleashed
             Unknown
         }
 
-        private MazeStatus Play_DoTowerMaze(ref Comm.CommFetchOptions opts, int map_stage)
+        private MazeStatus Play_DoTowerMaze(ref Comm.CommFetchOptions opts, int map_stage, bool keep_one_item)
         {
             Utils.LoggerNotifications("<color=#a07000>Running through maze tower " + map_stage.ToString() + "...</color>");
 
@@ -6651,6 +6669,8 @@ namespace EKUnleashed
 
                 string[] current_layer_items = Utils.SubStringsDups(Utils.ChopperBlank(current_layer_JSON.Replace(" ", ""), "\"Items\":[", "]"), ",");
 
+                int found_items = 0;
+                int total_items_on_layer = current_layer_items.Count(i => Utils.CInt(i) == 2 || Utils.CInt(i) == 3);
                 for (int current_item_index = 0; current_item_index < current_layer_items.Length; current_item_index++)
                 {
                     int current_item_type = Utils.CInt(current_layer_items[current_item_index]);
@@ -6662,6 +6682,19 @@ namespace EKUnleashed
                         bool want_to_fight_this_type = true;
                         if ((current_item_type == 2) && (!Utils.True("Game_MazeTowerChests"))) want_to_fight_this_type = false;
                         if ((current_item_type == 3) && (!Utils.True("Game_MazeTowerMonsters"))) want_to_fight_this_type = false;
+
+                        // if on last floor, if keeping one item on each maze
+                        // stop if 
+                        if (keep_one_item && max_floor == layer_in_mazetower)
+                        {
+                            int total_items_left = total_items_on_layer - found_items;
+                            if (total_items_left == 1)
+                            {
+                                Utils.LoggerNotifications("<color=#aa0000><b>Skipping last item of last floor on maze " + map_stage + "</b></color>");
+                                want_to_fight_this_type = false;
+                            }
+                        }
+                        found_items++;
 
                         if (want_to_fight_this_type)
                         {

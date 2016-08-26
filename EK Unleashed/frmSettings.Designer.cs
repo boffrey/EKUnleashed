@@ -183,6 +183,9 @@
             this.chkAutomation_FightArena = new System.Windows.Forms.CheckBox();
             this.chkAutomation_Events = new System.Windows.Forms.CheckBox();
             this.tabGeneral = new System.Windows.Forms.TabPage();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.txtGeneral_SellCardReserveThreshold = new System.Windows.Forms.TextBox();
             this.chkGeneral_DontLinkLowStarCards = new System.Windows.Forms.CheckBox();
             this.chkGeneral_AutoStoreReplays = new System.Windows.Forms.CheckBox();
             this.chkGeneral_ClaimWorldTreeRewards = new System.Windows.Forms.CheckBox();
@@ -232,9 +235,24 @@
             this.txtAccount_GameAccount = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tabctrlSettings = new System.Windows.Forms.TabControl();
-            this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.label62 = new System.Windows.Forms.Label();
-            this.txtGeneral_SellCardReserveThreshold = new System.Windows.Forms.TextBox();
+            this.cbAzatothGemCount = new System.Windows.Forms.ComboBox();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.cbBahamutGemCount = new System.Windows.Forms.ComboBox();
+            this.label66 = new System.Windows.Forms.Label();
+            this.cbDarkTitanGemCount = new System.Windows.Forms.ComboBox();
+            this.label67 = new System.Windows.Forms.Label();
+            this.cbDeucalionGemCount = new System.Windows.Forms.ComboBox();
+            this.label68 = new System.Windows.Forms.Label();
+            this.cbMarsGemCount = new System.Windows.Forms.ComboBox();
+            this.label69 = new System.Windows.Forms.Label();
+            this.cbPandarusGemCount = new System.Windows.Forms.ComboBox();
+            this.label70 = new System.Windows.Forms.Label();
+            this.cbPazuzuGemCount = new System.Windows.Forms.ComboBox();
+            this.label71 = new System.Windows.Forms.Label();
+            this.cbPlagueOgrynGemCount = new System.Windows.Forms.ComboBox();
+            this.label72 = new System.Windows.Forms.Label();
+            this.cbSeaKingGemCount = new System.Windows.Forms.ComboBox();
             this.tabRaider.SuspendLayout();
             this.tabThieves.SuspendLayout();
             this.tabArena.SuspendLayout();
@@ -258,12 +276,12 @@
             this.tabAutomation.SuspendLayout();
             this.groupBox19.SuspendLayout();
             this.tabGeneral.SuspendLayout();
+            this.groupBox20.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabAccount.SuspendLayout();
             this.tabctrlSettings.SuspendLayout();
-            this.groupBox20.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSave
@@ -1101,6 +1119,8 @@
             // 
             // groupBox18
             // 
+            this.groupBox18.Controls.Add(this.label72);
+            this.groupBox18.Controls.Add(this.cbSeaKingGemCount);
             this.groupBox18.Controls.Add(this.label38);
             this.groupBox18.Controls.Add(this.btn_SeaKing_Deck);
             this.groupBox18.Controls.Add(this.txtDI_SeaKing_DeckRunes);
@@ -1164,6 +1184,8 @@
             // 
             // groupBox17
             // 
+            this.groupBox17.Controls.Add(this.label71);
+            this.groupBox17.Controls.Add(this.cbPlagueOgrynGemCount);
             this.groupBox17.Controls.Add(this.label36);
             this.groupBox17.Controls.Add(this.btn_PlagueOgryn_Deck);
             this.groupBox17.Controls.Add(this.txtDI_PlagueOgryn_DeckRunes);
@@ -1227,6 +1249,8 @@
             // 
             // groupBox16
             // 
+            this.groupBox16.Controls.Add(this.label70);
+            this.groupBox16.Controls.Add(this.cbPazuzuGemCount);
             this.groupBox16.Controls.Add(this.label34);
             this.groupBox16.Controls.Add(this.btn_Pazuzu_Deck);
             this.groupBox16.Controls.Add(this.txtDI_Pazuzu_DeckRunes);
@@ -1290,6 +1314,8 @@
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.label69);
+            this.groupBox8.Controls.Add(this.cbPandarusGemCount);
             this.groupBox8.Controls.Add(this.label32);
             this.groupBox8.Controls.Add(this.btn_Pandarus_Deck);
             this.groupBox8.Controls.Add(this.txtDI_Pandarus_DeckRunes);
@@ -1353,6 +1379,8 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.label68);
+            this.groupBox7.Controls.Add(this.cbMarsGemCount);
             this.groupBox7.Controls.Add(this.label30);
             this.groupBox7.Controls.Add(this.btn_Mars_Deck);
             this.groupBox7.Controls.Add(this.txtDI_Mars_DeckRunes);
@@ -1416,6 +1444,8 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.label67);
+            this.groupBox6.Controls.Add(this.cbDeucalionGemCount);
             this.groupBox6.Controls.Add(this.label28);
             this.groupBox6.Controls.Add(this.btn_Deucalion_Deck);
             this.groupBox6.Controls.Add(this.txtDI_Deucalion_DeckRunes);
@@ -1479,6 +1509,8 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.label66);
+            this.groupBox5.Controls.Add(this.cbDarkTitanGemCount);
             this.groupBox5.Controls.Add(this.label3);
             this.groupBox5.Controls.Add(this.btn_DarkTitan_Deck);
             this.groupBox5.Controls.Add(this.txtDI_DarkTitan_DeckRunes);
@@ -1542,6 +1574,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label65);
+            this.groupBox4.Controls.Add(this.cbBahamutGemCount);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Controls.Add(this.btn_Bahamut_Deck);
             this.groupBox4.Controls.Add(this.txtDI_Bahamut_DeckRunes);
@@ -1605,6 +1639,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label64);
+            this.groupBox3.Controls.Add(this.cbAzatothGemCount);
             this.groupBox3.Controls.Add(this.label26);
             this.groupBox3.Controls.Add(this.btn_Azathoth_Deck);
             this.groupBox3.Controls.Add(this.txtDI_Azathoth_DeckRunes);
@@ -1941,6 +1977,36 @@
             this.tabGeneral.Size = new System.Drawing.Size(864, 455);
             this.tabGeneral.TabIndex = 5;
             this.tabGeneral.Text = "General";
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.label62);
+            this.groupBox20.Controls.Add(this.txtGeneral_SellCardReserveThreshold);
+            this.groupBox20.ForeColor = System.Drawing.Color.White;
+            this.groupBox20.Location = new System.Drawing.Point(402, 211);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(438, 139);
+            this.groupBox20.TabIndex = 34;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "Card Selling";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.ForeColor = System.Drawing.Color.White;
+            this.label62.Location = new System.Drawing.Point(6, 23);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(148, 13);
+            this.label62.TabIndex = 24;
+            this.label62.Text = "Leave a reserve when selling:";
+            // 
+            // txtGeneral_SellCardReserveThreshold
+            // 
+            this.txtGeneral_SellCardReserveThreshold.Location = new System.Drawing.Point(29, 45);
+            this.txtGeneral_SellCardReserveThreshold.Name = "txtGeneral_SellCardReserveThreshold";
+            this.txtGeneral_SellCardReserveThreshold.Size = new System.Drawing.Size(141, 20);
+            this.txtGeneral_SellCardReserveThreshold.TabIndex = 25;
             // 
             // chkGeneral_DontLinkLowStarCards
             // 
@@ -2484,35 +2550,266 @@
             this.tabctrlSettings.Size = new System.Drawing.Size(872, 481);
             this.tabctrlSettings.TabIndex = 0;
             // 
-            // groupBox20
+            // cbAzatothGemCount
             // 
-            this.groupBox20.Controls.Add(this.label62);
-            this.groupBox20.Controls.Add(this.txtGeneral_SellCardReserveThreshold);
-            this.groupBox20.ForeColor = System.Drawing.Color.White;
-            this.groupBox20.Location = new System.Drawing.Point(402, 211);
-            this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Size = new System.Drawing.Size(438, 139);
-            this.groupBox20.TabIndex = 34;
-            this.groupBox20.TabStop = false;
-            this.groupBox20.Text = "Card Selling";
+            this.cbAzatothGemCount.FormattingEnabled = true;
+            this.cbAzatothGemCount.Items.AddRange(new object[] {
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80"});
+            this.cbAzatothGemCount.Location = new System.Drawing.Point(103, 61);
+            this.cbAzatothGemCount.Name = "cbAzatothGemCount";
+            this.cbAzatothGemCount.Size = new System.Drawing.Size(44, 21);
+            this.cbAzatothGemCount.TabIndex = 52;
             // 
-            // label62
+            // label64
             // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.ForeColor = System.Drawing.Color.White;
-            this.label62.Location = new System.Drawing.Point(6, 23);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(148, 13);
-            this.label62.TabIndex = 24;
-            this.label62.Text = "Leave a reserve when selling:";
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.ForeColor = System.Drawing.Color.White;
+            this.label64.Location = new System.Drawing.Point(13, 65);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(84, 13);
+            this.label64.TabIndex = 53;
+            this.label64.Text = "Cooldown Gems";
             // 
-            // txtGeneral_SellCardReserveThreshold
+            // label65
             // 
-            this.txtGeneral_SellCardReserveThreshold.Location = new System.Drawing.Point(29, 45);
-            this.txtGeneral_SellCardReserveThreshold.Name = "txtGeneral_SellCardReserveThreshold";
-            this.txtGeneral_SellCardReserveThreshold.Size = new System.Drawing.Size(141, 20);
-            this.txtGeneral_SellCardReserveThreshold.TabIndex = 25;
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.ForeColor = System.Drawing.Color.White;
+            this.label65.Location = new System.Drawing.Point(13, 62);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(84, 13);
+            this.label65.TabIndex = 55;
+            this.label65.Text = "Cooldown Gems";
+            // 
+            // cbBahamutGemCount
+            // 
+            this.cbBahamutGemCount.FormattingEnabled = true;
+            this.cbBahamutGemCount.Items.AddRange(new object[] {
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80"});
+            this.cbBahamutGemCount.Location = new System.Drawing.Point(103, 58);
+            this.cbBahamutGemCount.Name = "cbBahamutGemCount";
+            this.cbBahamutGemCount.Size = new System.Drawing.Size(44, 21);
+            this.cbBahamutGemCount.TabIndex = 54;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.ForeColor = System.Drawing.Color.White;
+            this.label66.Location = new System.Drawing.Point(13, 63);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(84, 13);
+            this.label66.TabIndex = 55;
+            this.label66.Text = "Cooldown Gems";
+            // 
+            // cbDarkTitanGemCount
+            // 
+            this.cbDarkTitanGemCount.FormattingEnabled = true;
+            this.cbDarkTitanGemCount.Items.AddRange(new object[] {
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80"});
+            this.cbDarkTitanGemCount.Location = new System.Drawing.Point(103, 59);
+            this.cbDarkTitanGemCount.Name = "cbDarkTitanGemCount";
+            this.cbDarkTitanGemCount.Size = new System.Drawing.Size(44, 21);
+            this.cbDarkTitanGemCount.TabIndex = 54;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.ForeColor = System.Drawing.Color.White;
+            this.label67.Location = new System.Drawing.Point(13, 63);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(84, 13);
+            this.label67.TabIndex = 55;
+            this.label67.Text = "Cooldown Gems";
+            // 
+            // cbDeucalionGemCount
+            // 
+            this.cbDeucalionGemCount.FormattingEnabled = true;
+            this.cbDeucalionGemCount.Items.AddRange(new object[] {
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80"});
+            this.cbDeucalionGemCount.Location = new System.Drawing.Point(103, 59);
+            this.cbDeucalionGemCount.Name = "cbDeucalionGemCount";
+            this.cbDeucalionGemCount.Size = new System.Drawing.Size(44, 21);
+            this.cbDeucalionGemCount.TabIndex = 54;
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.ForeColor = System.Drawing.Color.White;
+            this.label68.Location = new System.Drawing.Point(13, 63);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(84, 13);
+            this.label68.TabIndex = 55;
+            this.label68.Text = "Cooldown Gems";
+            // 
+            // cbMarsGemCount
+            // 
+            this.cbMarsGemCount.FormattingEnabled = true;
+            this.cbMarsGemCount.Items.AddRange(new object[] {
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80"});
+            this.cbMarsGemCount.Location = new System.Drawing.Point(103, 59);
+            this.cbMarsGemCount.Name = "cbMarsGemCount";
+            this.cbMarsGemCount.Size = new System.Drawing.Size(44, 21);
+            this.cbMarsGemCount.TabIndex = 54;
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.ForeColor = System.Drawing.Color.White;
+            this.label69.Location = new System.Drawing.Point(13, 64);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(84, 13);
+            this.label69.TabIndex = 55;
+            this.label69.Text = "Cooldown Gems";
+            // 
+            // cbPandarusGemCount
+            // 
+            this.cbPandarusGemCount.FormattingEnabled = true;
+            this.cbPandarusGemCount.Items.AddRange(new object[] {
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80"});
+            this.cbPandarusGemCount.Location = new System.Drawing.Point(103, 60);
+            this.cbPandarusGemCount.Name = "cbPandarusGemCount";
+            this.cbPandarusGemCount.Size = new System.Drawing.Size(44, 21);
+            this.cbPandarusGemCount.TabIndex = 54;
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.ForeColor = System.Drawing.Color.White;
+            this.label70.Location = new System.Drawing.Point(13, 62);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(84, 13);
+            this.label70.TabIndex = 55;
+            this.label70.Text = "Cooldown Gems";
+            // 
+            // cbPazuzuGemCount
+            // 
+            this.cbPazuzuGemCount.FormattingEnabled = true;
+            this.cbPazuzuGemCount.Items.AddRange(new object[] {
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80"});
+            this.cbPazuzuGemCount.Location = new System.Drawing.Point(103, 58);
+            this.cbPazuzuGemCount.Name = "cbPazuzuGemCount";
+            this.cbPazuzuGemCount.Size = new System.Drawing.Size(44, 21);
+            this.cbPazuzuGemCount.TabIndex = 54;
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.ForeColor = System.Drawing.Color.White;
+            this.label71.Location = new System.Drawing.Point(13, 62);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(84, 13);
+            this.label71.TabIndex = 55;
+            this.label71.Text = "Cooldown Gems";
+            // 
+            // cbPlagueOgrynGemCount
+            // 
+            this.cbPlagueOgrynGemCount.FormattingEnabled = true;
+            this.cbPlagueOgrynGemCount.Items.AddRange(new object[] {
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80"});
+            this.cbPlagueOgrynGemCount.Location = new System.Drawing.Point(103, 58);
+            this.cbPlagueOgrynGemCount.Name = "cbPlagueOgrynGemCount";
+            this.cbPlagueOgrynGemCount.Size = new System.Drawing.Size(44, 21);
+            this.cbPlagueOgrynGemCount.TabIndex = 54;
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.ForeColor = System.Drawing.Color.White;
+            this.label72.Location = new System.Drawing.Point(13, 62);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(84, 13);
+            this.label72.TabIndex = 55;
+            this.label72.Text = "Cooldown Gems";
+            // 
+            // cbSeaKingGemCount
+            // 
+            this.cbSeaKingGemCount.FormattingEnabled = true;
+            this.cbSeaKingGemCount.Items.AddRange(new object[] {
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80"});
+            this.cbSeaKingGemCount.Location = new System.Drawing.Point(103, 58);
+            this.cbSeaKingGemCount.Name = "cbSeaKingGemCount";
+            this.cbSeaKingGemCount.Size = new System.Drawing.Size(44, 21);
+            this.cbSeaKingGemCount.TabIndex = 54;
             // 
             // frmSettings
             // 
@@ -2579,6 +2876,8 @@
             this.groupBox19.PerformLayout();
             this.tabGeneral.ResumeLayout(false);
             this.tabGeneral.PerformLayout();
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
             this.groupBox15.ResumeLayout(false);
             this.groupBox15.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -2588,8 +2887,6 @@
             this.tabAccount.ResumeLayout(false);
             this.tabAccount.PerformLayout();
             this.tabctrlSettings.ResumeLayout(false);
-            this.groupBox20.ResumeLayout(false);
-            this.groupBox20.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2801,5 +3098,23 @@
         private System.Windows.Forms.GroupBox groupBox20;
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.TextBox txtGeneral_SellCardReserveThreshold;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.ComboBox cbSeaKingGemCount;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.ComboBox cbPlagueOgrynGemCount;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.ComboBox cbPazuzuGemCount;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.ComboBox cbPandarusGemCount;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.ComboBox cbMarsGemCount;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.ComboBox cbDeucalionGemCount;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.ComboBox cbDarkTitanGemCount;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.ComboBox cbBahamutGemCount;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.ComboBox cbAzatothGemCount;
     }
 }

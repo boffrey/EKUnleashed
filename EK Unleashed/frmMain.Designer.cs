@@ -236,6 +236,7 @@
             this.privateMessageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chatchannelClan = new System.Windows.Forms.ToolStripMenuItem();
             this.kingdomWarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.fightMazeTowersButLeaveOneItemInEachTowerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autocraftCardsFromFragmentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem25 = new System.Windows.Forms.ToolStripSeparator();
             this.nameClicked.SuspendLayout();
@@ -463,6 +464,7 @@
             this.fightMazeTowersAndThenExploreWithRemainingEnergyToolStripMenuItem,
             this.toolStripMenuItem6,
             this.fightMazeTowersonlyToolStripMenuItem,
+            this.fightMazeTowersButLeaveOneItemInEachTowerToolStripMenuItem,
             this.exploreBestExperiencerewardingMapStageToolStripMenuItem,
             this.toolStripMenuItem17,
             this.fightDailyMapInvadersToolStripMenuItem,
@@ -2190,6 +2192,13 @@
             this.kingdomWarToolStripMenuItem.Text = "Kingdom War";
             this.kingdomWarToolStripMenuItem.Click += new System.EventHandler(this.kingdomWarToolStripMenuItem_Click);
             // 
+            // fightMazeTowersButLeaveOneItemInEachTowerToolStripMenuItem
+            // 
+            this.fightMazeTowersButLeaveOneItemInEachTowerToolStripMenuItem.Name = "fightMazeTowersButLeaveOneItemInEachTowerToolStripMenuItem";
+            this.fightMazeTowersButLeaveOneItemInEachTowerToolStripMenuItem.Size = new System.Drawing.Size(402, 22);
+            this.fightMazeTowersButLeaveOneItemInEachTowerToolStripMenuItem.Text = "Fight maze towers but leave one item in each tower";
+            this.fightMazeTowersButLeaveOneItemInEachTowerToolStripMenuItem.Click += new System.EventHandler(this.fightMazeTowersButLeaveOneItemInEachTowerToolStripMenuItem_Click);
+			// 
             // autocraftCardsFromFragmentsToolStripMenuItem
             // 
             this.autocraftCardsFromFragmentsToolStripMenuItem.Name = "autocraftCardsFromFragmentsToolStripMenuItem";
@@ -2467,6 +2476,7 @@
         private System.Windows.Forms.ToolStripMenuItem moreCardGroupsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem25;
         private System.Windows.Forms.ToolStripMenuItem autocraftCardsFromFragmentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fightMazeTowersButLeaveOneItemInEachTowerToolStripMenuItem;
     }
 }
 
