@@ -202,6 +202,11 @@ namespace EKUnleashed
                 int.TryParse(Utils.GetAppSetting("DemonInvasion_Bahamut_GemReset"), out diGemCountIndex);
                 this.cbBahamutGemCount.SelectedIndex = diGemCountIndex;
 
+                this.btn_Cthulhu_Deck.Tag = Utils.GetAppSetting("DemonInvasion_Cthulhu_Deck");
+                this.btn_Cthulhu_Deck.Text = DescribeDeck(this.btn_Cthulhu_Deck.Tag);
+                this.txtDI_Cthulhu_DeckCards.Text = Utils.CondenseSpacing(Utils.GetAppSetting("DemonInvasion_Cthulhu_DeckCards").Trim()).Replace(", ", ",").Replace(" ,", ",").Replace(",", ", ");
+                this.txtDI_Cthulhu_DeckRunes.Text = Utils.CondenseSpacing(Utils.GetAppSetting("DemonInvasion_Cthulhu_DeckRunes").Trim()).Replace(", ", ",").Replace(" ,", ",").Replace(",", ", ");
+
                 this.btn_DarkTitan_Deck.Tag = Utils.GetAppSetting("DemonInvasion_DarkTitan_Deck");
                 this.btn_DarkTitan_Deck.Text = DescribeDeck(this.btn_DarkTitan_Deck.Tag);
                 this.txtDI_DarkTitan_DeckCards.Text = Utils.CondenseSpacing(Utils.GetAppSetting("DemonInvasion_DarkTitan_DeckCards").Trim()).Replace(", ", ",").Replace(" ,", ",").Replace(",", ", ");
@@ -447,7 +452,11 @@ namespace EKUnleashed
 
                     Utils.SetAppSetting("DemonInvasion_Bahamut_Deck", this.btn_Bahamut_Deck.Tag.ToString());
                     Utils.SetAppSetting("DemonInvasion_Bahamut_DeckCards", this.txtDI_Bahamut_DeckCards.Text.Trim());
-                    Utils.SetAppSetting("DemonInvasion_Bahamut_DeckRunes", this.txtDI_Bahamut_DeckRunes.Text.Trim());                    
+                    Utils.SetAppSetting("DemonInvasion_Bahamut_DeckRunes", this.txtDI_Bahamut_DeckRunes.Text.Trim());
+
+                    Utils.SetAppSetting("DemonInvasion_Cthulhu_Deck", this.btn_Cthulhu_Deck.Tag.ToString());
+                    Utils.SetAppSetting("DemonInvasion_Cthulhu_DeckCards", this.txtDI_Cthulhu_DeckCards.Text.Trim());
+                    Utils.SetAppSetting("DemonInvasion_Cthulhu_DeckRunes", this.txtDI_Cthulhu_DeckRunes.Text.Trim());
 
                     Utils.SetAppSetting("DemonInvasion_DarkTitan_Deck", this.btn_DarkTitan_Deck.Tag.ToString());
                     Utils.SetAppSetting("DemonInvasion_DarkTitan_DeckCards", this.txtDI_DarkTitan_DeckCards.Text.Trim());
@@ -714,6 +723,11 @@ namespace EKUnleashed
             this.DeckSelector(ref this.btn_Bahamut_Deck);
         }
 
+        private void btn_Cthulhu_Deck_Click(object sender, EventArgs e)
+        {
+            this.DeckSelector(ref this.btn_Cthulhu_Deck);
+        }
+
         private void btn_DarkTitan_Deck_Click(object sender, EventArgs e)
         {
             this.DeckSelector(ref this.btn_DarkTitan_Deck);
@@ -812,6 +826,5 @@ namespace EKUnleashed
         {
             this.DeckSelector(ref this.btn_DemonFiend_Deck);
         }
-                
     }
 }
